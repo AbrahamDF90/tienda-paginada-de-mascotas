@@ -7,3 +7,5 @@ Actualice el php y el composer lo que genero muchos problemas y atrasos pero ya 
 En cuarto lugar creamos el layuot, creando la carpeta y el archivo app.blade.php dentro, luego cargamos dicho archivo con codigo. creamos el archivo css, primero creando en public la carpeta css y dentro el archivo style.css, luego cargamos la configuracion de css alli con codigo. Modificamos la vista create.blade.php y el index.blade.php.
 
 Por ultimo cambiaremos incluiremos en el paginado filtros con diseño. Modificamos el deadme del pet controler. Agregamos el buscador en la vista index.blade.php y editamos la tabla.
+
+modificamos la vista app.blade.php para que meta los estilos

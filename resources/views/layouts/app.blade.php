@@ -4,6 +4,8 @@
 <meta charset="UTF-8"> 
 <title>@yield('title', 'Sistema de Mascotas')</title> 
 <link rel="stylesheet" href="{{ asset('css/style.css') }}"> 
+
+@vite('resources/css/app.css')
 </head> 
 <body> 
  
