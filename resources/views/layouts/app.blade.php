@@ -3,27 +3,34 @@
 <head> 
 <meta charset="UTF-8"> 
 <title>@yield('title', 'Sistema de Mascotas')</title> 
-<link rel="stylesheet" href="{{ asset('css/style.css') }}"> 
 
-@vite('resources/css/app.css')
+
+ @vite(['resources/css/app.css', 'resources/js/app.js']) 
 </head> 
-<body> 
  
-   <header class="header"> 
-       <h1>Sistema de Mascotas</h1> 
-       <nav> 
-           <a href="{{ route('pets.index') }}">Listado</a> 
-           <a href="{{ route('pets.create') }}">Nueva Mascota</a> 
-       </nav> 
-   </header> 
+<body class="bg-gray-100 text-gray-800 font-sans"> 
  
-   <main class="container"> 
-       @yield('content') 
-   </main> 
+    <header class="bg-slate-800 text-white shadow"> 
+        <div class="max-w-5xl mx-auto px-6 py-5 flex justify-between 
+items-center"> 
+            <h1 class="text-2xl font-bold">Sistema de Mascotas</h1> 
  
-   <footer class="footer"> 
-       Programación III - Laravel 13 
-   </footer> 
+            <nav class="space-x-4"> 
+                <a href="{{ route('pets.index') }}" 
+class="hover:underline">Listado</a> 
+                <a href="{{ route('pets.create') }}" 
+class="hover:underline">Nueva Mascota</a> 
+            </nav> 
+        </div> 
+    </header> 
+ 
+    <main class="max-w-5xl mx-auto px-6 py-8"> 
+        @yield('content') 
+    </main> 
+ 
+    <footer class="text-center text-sm text-gray-500 py-6"> 
+        Programación III - Laravel 13 
+    </footer> 
  
 </body> 
-</html> 
+</html>

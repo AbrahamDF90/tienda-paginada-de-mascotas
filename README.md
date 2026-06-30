@@ -8,4 +8,8 @@ En cuarto lugar creamos el layuot, creando la carpeta y el archivo app.blade.php
 
 Por ultimo cambiaremos incluiremos en el paginado filtros con diseño. Modificamos el deadme del pet controler. Agregamos el buscador en la vista index.blade.php y editamos la tabla.
 
-modificamos la vista app.blade.php para que meta los estilos
+Modificamos la vista app.blade.php para que meta los estilos
+
+Finalmente corregimos un error que paso al estar desactualizado el archivo subido al aula, por lo que ahora con las correcciones correspondientes funciona todo.
+
+Despues de clonar el proyecto,ejecutar el composer y migraciones, es necesario abrir powershell ubicarse dentro del proyecto e ingresar el comando "npm.cmd run dev". Luego recien ejecutamos el comando "php artisan serve" en la terminal de visual y abrimos el URL corrrespondiete (http://127.0.0.1:8000/mascotas)

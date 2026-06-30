@@ -4,20 +4,29 @@
  
 @section('content') 
  
-<div class="card"> 
-   <h2>Directorio de Mascotas</h2> 
+<div class="bg-white rounded-xl shadow p-6"> 
+    <div class="flex justify-between items-center mb-6"> 
+        <h2 class="text-2xl font-bold text-slate-800"> 
+            Directorio de Mascotas 
+        </h2> 
  
-   @if(session('success')) 
-       <div class="alert-success"> 
-           {{ session('success') }} 
-       </div> 
-   @endif 
+        <a 
+            href="{{ route('pets.create') }}" 
+            class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 
+rounded-lg transition" 
+        > 
+            Registrar Nueva Mascota 
+        </a> 
+    </div> 
  
-   <div class="actions"> 
-       <a href="{{ route('pets.create') }}" class="btn">Registrar Nueva Mascota</a> 
-   </div> 
+    @if(session('success')) 
+        <div class="bg-green-100 text-green-800 px-4 py-3 rounded-lg 
+mb-4"> 
+            {{ session('success') }} 
+        </div> 
+    @endif 
  
-   <div class="bg-white rounded-xl shadow p-4 mb-6"> 
+    <div class="bg-white rounded-xl shadow p-4 mb-6"> 
     <form method="GET" action="{{ route('pets.index') }}" class="flex gap-3 
 items-center"> 
         <label class="font-semibold text-slate-800">Filtrar:</label> 
@@ -35,12 +44,13 @@ text-white px-4 py-2 rounded-lg transition">
         </button> 
         <a href="{{ route('pets.index') }}" class="bg-gray-500 
 hover:bg-gray-600 text-white px-4 py-2 rounded-lg transition"> 
-            Limpiar   
+            Limpiar 
+ 
         </a> 
     </form> 
-</div> 
+</div>
 
-<div class="bg-white rounded-xl shadow overflow-hidden"> 
+   <div class="bg-white rounded-xl shadow overflow-hidden"> 
     <table class="w-full border-collapse"> 
         <thead> 
             <tr class="bg-slate-800 text-white"> 
@@ -67,4 +77,5 @@ hover:bg-gray-600 text-white px-4 py-2 rounded-lg transition">
 <div class="mt-6"> 
     {{ $pets->links() }} 
 </div> 
+ 
 @endsection 
